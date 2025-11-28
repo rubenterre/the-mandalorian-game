@@ -1,0 +1,245 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: mandalore;
+    src: url(../styles/fonts/mandalore.ttf);
+}
+
+:root{
+  --color-primary: #46484F;
+  --color-secondary: #E2C3BA;
+  --color-check: #16a34a;
+  --font-primary: mandalore;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: url(../assets/img/fondo_the_mandalorian.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+body, input, button {
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+
+/* Estilos generales */
+
+video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__logo{
+    max-width: 50%;
+    filter: drop-shadow(0px 4px 5px black);
+}
+
+.hero__h3{
+    font-size: 1.3rem;
+    text-shadow: 0px 4px 8px black;
+    margin: 2rem 0px;
+}
+
+#restart {
+  color: var(--color-secondary);
+  border: 3px solid var(--color-secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 5px 2rem;
+  margin: 1rem 0px;
+  background: var(--color-primary);
+}
+
+#restart:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+    border: 3px solid var(--color-primary);
+
+}
+
+#restart:active {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+    border: 3px solid var(--color-primary);
+
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  perspective: 1000px;
+}
+
+/* Carta */
+
+.card {
+  width: 127px;
+  height: 106px;
+  position: relative;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 8px black);
+}
+
+/* Estado volteado: gira la tarjeta entera */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Imagen carta */
+
+.carta__img{
+  width: 127px;
+  height: 106px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid var(--color-secondary);
+}
+
+/* Caras */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+/* Caras */
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+/* Frente y dorso como ya tienes */
+.card-front {
+  transform: rotateY(180deg);
+}
+
+/* Flip */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estado volteado */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estado acertado */
+.card.matched {
+  cursor: default;
+  opacity: 0.4;
+}
+
+/* Footer */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0px;
+}
+
+.footer__p{
+  font-size: 1rem;
+}
+
+/* Modal */
+
+.modal__container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+  background: var(--color-primary);
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 4px solid var(--color-secondary);
+  padding: 1rem;
+  filter: drop-shadow(0px 4px 8px black);
+
+}
+
+.modal__h3{
+  color: var(--color-secondary);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal__img{
+  width: 200px;
+}
+
+.modal__button{
+    color: var(--color-secondary);
+  border: 3px solid var(--color-secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 5px 2rem;
+  margin: 1rem 0px;
+  background: var(--color-check);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juego de memoria de The Mandalorian</title>
+    <meta name="description" content="Juego de memoria basado en la serie de The Mandalorian">
+    <meta name="author" content="Rubén Terré">
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+        <!-- Configuración General PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+
+    <!-- Meta tags PWA -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+
+        <!-- Favicons -->
+    <link rel="shortcut icon" href="./favicons/favicon_16x16@1x.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="./favicons/favicon_96x96@1x.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/favicon_144x144@1x.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicons/favicon_192x192@1x.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="favicons/favicon_512x512.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="favicons/favicon_1024x1024@1x.png">
+
+  </head>
+  <body>
+    <video autoplay loop muted>
+      <source
+        src="./assets/videos/fondo_mandalorian_768x1024.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <main class="main">
+      <div class="hero">
+        <img
+          class="hero__logo"
+          src="./assets/img/logo_mandalorian.png"
+          alt="Logo de The Mandalorian"
+        />
+        <h3 class="hero__h3">Juego de memoria</h3>
+      </div>
+      <button id="restart">Reiniciar ↩︎</button>
+      <div class="game-board" id="gameBoard"></div>
+    </main>
+    <footer class="footer">
+      <p class="footer__p">Hecho con ♥️ para Icía</p>
+    </footer>
+
+    <div id="modal" class="modal"></div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
