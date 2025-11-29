@@ -32,8 +32,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  height: 100dvh;
+  height: 100svh;
   width: 100vw;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 body, input, button {
@@ -278,16 +280,17 @@ h1 {
 
   body {
     padding: 10px;
-    height: 100vh;
+    height: 100svh;
   }
 
   .hero__logo {
     max-width: 90%;
+    margin-top: 3rem;
   }
 
   .hero__h3 {
     font-size: 2rem;
-    margin: 1rem 0px;
+    margin: 2rem 0px;
   }
 
   #restart {
