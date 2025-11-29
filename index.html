@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>Juego de memoria de The Mandalorian</title>
-    <meta name="description" content="Juego de memoria basado en la serie de The Mandalorian">
-    <meta name="author" content="Rubén Terré">
+    <meta
+      name="description"
+      content="Juego de memoria basado en la serie de The Mandalorian"
+    />
+    <meta name="author" content="Rubén Terré" />
 
     <link rel="stylesheet" href="./styles/style.css" />
 
-        <!-- Configuración General PWA -->
+    <!-- Configuración General PWA -->
     <link rel="manifest" href="manifest.json" />
-
 
     <!-- Meta tags PWA -->
     <meta
@@ -26,37 +28,72 @@
       content="black-translucent"
     />
 
-
-        <!-- Favicons -->
-    <link rel="shortcut icon" href="./favicons/favicon_16x16@1x.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="./favicons/favicon_96x96@1x.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/favicon_144x144@1x.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="./favicons/favicon_192x192@1x.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="./favicons/favicon_512x512@1x.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="./favicons/favicon_1024x1024@1x.png">
-
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="./favicons/favicon_16x16@1x.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="96x96"
+      href="./favicons/favicon_96x96@1x.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./favicons/favicon_144x144@1x.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./favicons/favicon_192x192@1x.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="./favicons/favicon_512x512@1x.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="1024x1024"
+      href="./favicons/favicon_1024x1024@1x.png"
+    />
   </head>
   <body>
     <video autoplay loop muted>
       <source
-        src="./assets/videos/fondo_mandalorian_768x1024.mp4"
+        src="./assets/videos/fondo_mandalorian_768x1024_v2.mp4"
         type="video/mp4"
       />
     </video>
     <main class="main">
       <div class="hero">
-        <img
-          class="hero__logo"
-          src="./assets/img/logo_mandalorian.png"
-          alt="Logo de The Mandalorian"
-        />
+        <div class="hero__container">
+          <picture class="hero__logo">
+            <source
+              srcset="./assets/img/logo_mandalorian.avif"
+              type="image/avif"
+            />
+            <img
+              src="./assets/img/logo_mandalorian.png"
+              alt="logo_mandalorian"
+              class="hero__logo-img"
+            />
+          </picture>
+        </div>
+
         <h3 class="hero__h3">Juego de memoria</h3>
       </div>
       <button id="restart">Reiniciar ↩︎</button>
       <div class="game-board" id="gameBoard"></div>
     </main>
     <footer class="footer">
-      <p class="footer__p">Hecho con ♥️ para Icía</p>
+      <p class="footer__p">
+        Hecho con ♥️ para Icía por
+        <a
+          href="http://rubenterre.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Rubén Terré</a
+        >
+      </p>
     </footer>
 
     <div id="modal" class="modal"></div>
