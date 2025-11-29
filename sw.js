@@ -1,19 +1,19 @@
 // Asignar nombre y version de la caché
-const CACHE_NAME = 'v1_cache_weatherapp_pwa';
+const CACHE_NAME = 'v1_cache_the_mandalorian_pwa';
 
 // Ficheros a cachear en la aplicación
 const urlsToCache = [
   './',
-  './css/styles.css',
-  './assets/favicons/favicon_16x16@1x.png',
-  './assets/favicons/favicon_32x32@1x.png',
-  './assets/favicons/favicon_48x48@1x.png',
-  './assets/favicons/favicon_96x96@1x.png',
-  './assets/favicons/favicon_144x144@1x.png',
-  './assets/favicons/favicon_180x180@1x.png',
-  './assets/favicons/favicon_192x192@1x.png',
-  './assets/favicons/favicon_512x512@1x.png',
-    './assets/favicons/favicon_1024x1024@1x.png',
+  './styles/style.css',
+  './favicons/favicon_16x16@1x.png',
+  './favicons/favicon_32x32@1x.png',
+  './favicons/favicon_48x48@1x.png',
+  './favicons/favicon_96x96@1x.png',
+  './favicons/favicon_144x144@1x.png',
+  './favicons/favicon_180x180@1x.png',
+  './favicons/favicon_192x192@1x.png',
+  './favicons/favicon_512x512@1x.png',
+    './favicons/favicon_1024x1024@1x.png',
 
 ];
 
