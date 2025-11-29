@@ -32,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
