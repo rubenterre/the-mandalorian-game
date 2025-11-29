@@ -20,7 +20,7 @@ Juego de memoria con parejas de cartas iguales de personajes de The Mandalorian.
 ## Estrutura do proxecto
 
 - `index.html`: páxina principal da aplicación.
-- `css/styles.css`: estilos da interface.
+- `styles/style.css`: estilos da interface.
 - `sw.js` (ou `service-worker.js`): script do Service Worker, xestiona a caché e as peticións de rede.
 - `manifest.json`: configuración da PWA (nome, short_name, display, start_url, scope, icons, etc.).
 - `assets/favicons/`: iconos e favicons para navegadores, PWA e dispositivos móbiles.
@@ -30,9 +30,9 @@ Juego de memoria con parejas de cartas iguales de personajes de The Mandalorian.
 
 O Service Worker realiza:
 
-- Evento `install`: abre a caché `v1_cache_weatherapp_pwa` e almacena os recursos estáticos necesarios para que a aplicación funcione sen conexión (HTML, CSS, iconos, etc.).[web:63]  
+- Evento `install`: abre a caché `v1_cache_the_mandalorian_app` e almacena os recursos estáticos necesarios para que a aplicación funcione sen conexión (HTML, CSS, iconos, etc.).[web:63]  
 - Evento `activate`: elimina cachés antigas que non están na whitelist e toma o control inmediato das páxinas coa chamada a `clients.claim()`. Isto evita ter que recargar a páxina para usar a nova versión do Service Worker.[web:63][web:66]  
-- Evento `fetch`: intercepta as peticións da aplicación e devolve primeiro os recursos da caché, facendo “fallback” á rede se non están cacheados (estratexia cache-first).[web:63]
+
 
 ## Manifest e modo pantalla completa
 
