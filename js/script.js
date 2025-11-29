@@ -143,7 +143,7 @@ function checkWin() {
         <h3 class="modal__h3">¡Enhorabuena! Has acertado todas las parejas</h3>
         <img
           class="modal__img"
-          src="./assets/img/grogu_happy.png"
+          src="./assets/img/grogu_happy.avif"
           alt="Grogu celebra que ganaste"
         />
         <button onclick="cerrarModal()" class="modal__button">ACEPTAR</button>
@@ -155,6 +155,7 @@ function checkWin() {
 
 function cerrarModal() {
     document.getElementById("modal").innerHTML = "";
+    setupBoard();
 }
 
 restartBtn.addEventListener("click", setupBoard);
